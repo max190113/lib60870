@@ -355,6 +355,12 @@ CS104_Connection_close(CS104_Connection self);
 void
 CS104_Connection_destroy(CS104_Connection self);
 
+char*
+CS104_Connection_getHostname(CS104_Connection self);
+
+int
+CS104_Connection_getTcpPort(CS104_Connection self);
+
 /*! @} */
 
 /*! @} */

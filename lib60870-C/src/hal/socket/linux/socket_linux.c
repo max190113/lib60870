@@ -401,6 +401,7 @@ ServerSocket_destroy(ServerSocket self)
 Socket
 TcpSocket_create()
 {
+    char optionReuseAddr = 1;
     Socket self = (Socket)NULL;
 
     int sock = socket(AF_INET, SOCK_STREAM, 0);
@@ -434,6 +435,7 @@ TcpSocket_create()
         if (DEBUG_SOCKET)
             printf("SOCKET: failed to create socket (errno=%i)\n", errno);
     }
+    setsockopt(self->fd, SOL_SOCKET, SO_REUSEADDR, &optionReuseAddr, sizeof(int));
 
     return self;
 }

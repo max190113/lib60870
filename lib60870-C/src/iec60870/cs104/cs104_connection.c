@@ -1204,3 +1204,14 @@ CS104_Connection_isTransmitBufferFull(CS104_Connection self)
     return isSentBufferFull(self);
 }
 
+char*
+CS104_Connection_getHostname(CS104_Connection self)
+{
+    return self->hostname;
+}
+
+int
+CS104_Connection_getTcpPort(CS104_Connection self)
+{
+    return self->tcpPort;
+}

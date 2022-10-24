@@ -2660,7 +2660,7 @@ connectionHandlingThread(void* parameter)
          * was received. Otherwise wait to save CPU time.
          */
         if (isAsduWaiting)
-            socketTimeout = 1;
+            socketTimeout = 10;
         else
             socketTimeout = 100;
 

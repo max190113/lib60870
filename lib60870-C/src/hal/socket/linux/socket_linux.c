@@ -297,7 +297,7 @@ TcpServerSocket_create(const char* address, int port)
             serverSocket->fd = fd;
             serverSocket->backLog = 2;
 
-            setSocketNonBlocking((Socket) serverSocket);
+            // setSocketNonBlocking((Socket) serverSocket);
         }
         else {
             close(fd);
